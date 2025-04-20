@@ -1,6 +1,6 @@
 # 🥫 Food Product Explorer
 
-This is a responsive and dynamic React web application built as an assignment for aDMe. The app allows users to search and explore food products using the OpenFoodFacts API. Users can filter by category, sort by nutritional values, view detailed product pages, and more.
+This is a responsive and dynamic React web application which allows users to search and explore food products using the OpenFoodFacts API. Users can filter by category, sort by nutritional values, view detailed product pages, and more.
 
 ---
 
