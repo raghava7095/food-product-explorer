@@ -1,4 +1,3 @@
-// components/Searchbar.jsx
 import { useState } from "react";
 import { Search, Barcode } from "lucide-react";
 

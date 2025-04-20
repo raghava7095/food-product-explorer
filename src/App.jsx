@@ -1,5 +1,10 @@
 import { useEffect, useState, useCallback } from "react";
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 import ProductCard from "./components/ProductCard";
 import SearchBar from "./components/SearchBar";
 import CategoryFilter from "./components/CategoryFilter";
@@ -11,7 +16,7 @@ function App() {
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [category, setCategory] = useState(null);
-  const [sortOption, setSortOption] = useState(""); // ✅ sorting state
+  const [sortOption, setSortOption] = useState("");
 
   const navigate = useNavigate();
 
@@ -162,16 +167,16 @@ function App() {
 
   return (
     <div className="p-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Food Product Explorer</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">
+        Food Product Explorer
+      </h1>
       <SearchBar onSearch={handleSearch} />
       <CategoryFilter onCategorySelect={handleCategorySelect} />
 
-      {/* ✅ Sorting dropdown */}
       <div className="flex flex-col md:flex-row gap-4 p-4 w-full md:items-center">
-      {/* Sort Options Label */}
-      <label className="text-lg font-semibold text-gray-800 dark:text-gray-800">
-        Sort Options : 
-      </label>
+        <label className="text-lg font-semibold text-gray-800 dark:text-gray-800">
+          Sort Options :
+        </label>
         <select
           className="w-full sm:w-52 px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm sm:text-base text-gray-800 dark:text-gray-100 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 ease-in-out hover:shadow-md"
           value={sortOption}
@@ -191,7 +196,6 @@ function App() {
         </div>
       )}
 
-      {/* ✅ Render sorted products */}
       {products.length > 0 && (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {sortedProducts().map((product, idx) => (

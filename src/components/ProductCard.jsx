@@ -1,10 +1,12 @@
-// components/ProductCard.jsx
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 function ProductCard({ product }) {
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.02] transition duration-300 overflow-hidden">
-      <Link to={`/product/${product.code}`} className="block p-4 flex-col gap-3">
+      <Link
+        to={`/product/${product.code}`}
+        className="block p-4 flex-col gap-3"
+      >
         <img
           src={
             product.image_url ||
